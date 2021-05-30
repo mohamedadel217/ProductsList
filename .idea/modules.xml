@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jumia2.iml" filepath="$PROJECT_DIR$/.idea/modules/jumia2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Data/jumia2.Data.iml" filepath="$PROJECT_DIR$/.idea/modules/Data/jumia2.Data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Domain/jumia2.Domain.iml" filepath="$PROJECT_DIR$/.idea/modules/Domain/jumia2.Domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/jumia2.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/jumia2.app.iml" />
+    </modules>
+  </component>
+</project>

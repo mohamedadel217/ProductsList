@@ -1,2 +1,26 @@
 # ProductList
-it's template project created with clean architecture  and MVVM
+A sample Android application using MVVM, Clean Architecture, Android Architecture Components,jetpack components
+
+and have offline and online modes. 
+
+## Techologies 
+
+###### offline mode(Data Base)
+Using Room library
+
+###### NetWork
+Using retrofit and Okhttp client to handel network issues and network caching 
+
+###### Dependancy Injection
+Using Dagger Hilt
+
+###### Image Loading
+Using Picasso
+
+###### Paging
+Using paging3
+
+###### testing
+Using Juint4
+
+

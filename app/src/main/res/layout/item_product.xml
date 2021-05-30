@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        app:cardCornerRadius="15dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            >
+
+            <ImageView
+                android:id="@+id/phoneImageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:adjustViewBounds="true"
+                android:maxHeight="200dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/product" />
+
+            <ProgressBar
+
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingBottom="8dp"
+                android:isIndicator="true"
+                android:max="5"
+                android:rating="@{phone.rating_average}"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:theme="@style/RatingBar"
+
+                app:layout_constraintStart_toStartOf="@+id/phoneOldPriceTextView"
+                app:layout_constraintTop_toBottomOf="@+id/phoneOldPriceTextView"
+                tools:rating="5" />
+
+            <TextView
+                android:id="@+id/phoneNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:maxWidth="200dp"
+                android:text="@{phone.name}"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/phoneBrandTextView"
+                tools:text="X1s 3GB Ram 32GB mobile phone" />
+
+
+            <TextView
+                android:id="@+id/phonePriceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:maxWidth="100dp"
+                android:text="@{`$ `+phone.special_price}"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/phoneNameTextView"
+                tools:text="N 37,390" />
+
+            <TextView
+                android:id="@+id/phoneDiscountTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/item_price_discount_background"
+                android:ellipsize="end"
+                android:maxWidth="100dp"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="2dp"
+                android:text="@{`-`+Integer.valueOf(phone.max_saving_percentage)+`%`}"
+                android:textColor="#FAB05D"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/phonePriceTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/phonePriceTextView"
+                tools:text="-30%" />
+
+            <TextView
+                android:id="@+id/phoneOldPriceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:maxWidth="200dp"
+                android:text="@{`$ `+phone.price}"
+                android:textColor="#808080"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/phonePriceTextView"
+                tools:text="N 37,320" />
+
+            <TextView
+                android:id="@+id/phoneBrandTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@{phone.brand}"
+                android:textColor="#808080"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/phoneImageView"
+                tools:text="Gionee" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <data>
+
+        <variable
+            name="phone"
+            type="com.example.domain.model.ResultsItem" />
+    </data>
+
+
+</layout>
+
+
+
