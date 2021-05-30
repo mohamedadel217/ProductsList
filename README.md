@@ -5,22 +5,22 @@ and have offline and online modes.
 
 ## Techologies 
 
-###### offline mode(Data Base)
+###### offline mode:
 Using Room library
 
-###### NetWork
+### NetWork:
 Using retrofit and Okhttp client to handel network issues and network caching 
 
-###### Dependancy Injection
+### Dependancy Injection:
 Using Dagger Hilt
 
-###### Image Loading
+### Image Loading:
 Using Picasso
 
-###### Paging
+### Paging:
 Using paging3
 
-###### testing
+### testing:
 Using Juint4
 
 
