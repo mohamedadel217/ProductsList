@@ -5,10 +5,10 @@ and have offline and online modes.
 
 ## Techologies 
 
-###### offline mode:
+### offline mode:
 Using Room library
 
-### NetWork:
+### Network:
 Using retrofit and Okhttp client to handel network issues and network caching 
 
 ### Dependancy Injection:
